@@ -99,7 +99,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.calculator__number, .calculator__op, .calculator__del, .calculator__delete, .calculator__op--igual, .calculator__decimal {
+.calculator__number, .calculator__op--menos, .calculator__op, .calculator__del, .calculator__delete, .calculator__op--igual, .calculator__decimal {
   font-family: "Roboto", sans-serif;
   width: 25%;
   cursor: pointer;
@@ -112,7 +112,7 @@ body {
   -ms-transition: color 0.5s linear;
   -o-transition: color 0.5s linear;
 }
-.calculator__number:hover, .calculator__op:hover, .calculator__del:hover, .calculator__delete:hover, .calculator__op--igual:hover, .calculator__decimal:hover {
+.calculator__number:hover, .calculator__op--menos:hover, .calculator__op:hover, .calculator__del:hover, .calculator__delete:hover, .calculator__op--igual:hover, .calculator__decimal:hover {
   color: #f87060;
 }
 .calculator__number {
