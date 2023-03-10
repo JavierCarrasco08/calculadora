@@ -1,0 +1,145 @@
+@use "_variables" as *;
+// HTML
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: $primary-color-black;
+}
+
+body {
+  background-image: linear-gradient(
+    $primary-color-gray 35%,
+    $primary-color-red 15%,
+    $primary-color-red 50%
+  );
+  overflow-x: hidden;
+  max-width: 1500px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding: {
+    right: 1rem;
+  }
+  &__nav {
+    display: flex;
+    gap: 2rem;
+  }
+  &__enl {
+    width: 3rem;
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    &:hover {
+      transform: translateY(-10px);
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      -o-transform: translateY(-10px);
+    }
+  }
+}
+
+.calculator {
+  overflow: hidden;
+  min-width: 20rem;
+  width: 40%;
+  height: 70vh;
+  background-color: $primary-color-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: {
+    top: 1rem;
+    bottom: 1rem;
+  }
+
+  &__screen {
+    width: 90%;
+    height: 18%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+      width: 10px;
+    }
+    &::-webkit-scrollbar:horizontal {
+      height: 0.2rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary-color-red;
+      border-radius: 20px;
+      width: 50%;
+      //   border: 2px solid $primary-color-gray;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+  &__num {
+    margin-top: 2.5rem;
+  }
+  &__body {
+    width: 95%;
+    height: 80%;
+    color: $primary-color-gray;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__number,
+  &__op,
+  &__del,
+  &__delete,
+  &__op--igual,
+  &__decimal {
+    font-family: "Roboto", sans-serif;
+    width: 25%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: color 0.5s linear;
+    -webkit-transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;
+    -ms-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    &:hover {
+      color: $primary-color-red;
+    }
+  }
+  &__number {
+    font-weight: 300;
+  }
+  &__delete,
+  &__op--igual {
+    width: 50%;
+  }
+  &__op--igual {
+    color: $primary-color-red;
+  }
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}

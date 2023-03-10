@@ -4,7 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="./../dist/reset-styles/reset.css" />
+    <link rel="stylesheet" href="./../dist/styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/svg/calculator.svg"
+      type="image/x-icon" />
   </head>
-  <body></body>
+  <body>
+    <header class="hero">
+      <nav class="hero__nav">
+        <a
+          href="https://github.com/JavierCarrasco08"
+          title="Github"
+          target="_blank"
+          class="hero__enl"
+          rel="noopener referrer"
+          ><img src="./assets/svg/github.svg" alt="Github"
+        /></a>
+        <a
+          href="https://www.instagram.com/javier_carrasco08/?hl=es-la"
+          title="Instagram"
+          target="_blank"
+          rel="noopener referrer"
+          class="hero__enl">
+          <img src="./assets/svg/instagram.svg" alt="Instagram"
+        /></a>
+      </nav>
+    </header>
+    <main class="calculator">
+      <header class="calculator__screen">
+        <p class="calculator__num">1234556</p>
+      </header>
+      <section class="calculator__body">
+        <button class="calculator__number">9</button>
+        <button class="calculator__number">8</button>
+        <button class="calculator__number">7</button>
+        <button class="calculator__del">DEl</button>
+        <button class="calculator__number">6</button>
+        <button class="calculator__number">5</button>
+        <button class="calculator__number">4</button>
+        <button class="calculator__op">+</button>
+        <button class="calculator__number">3</button>
+        <button class="calculator__number">2</button>
+        <button class="calculator__number">1</button>
+        <button class="calculator__op">-</button>
+        <button class="calculator__decimal">.</button>
+        <button class="calculator__number">0</button>
+        <button class="calculator__op">x</button>
+        <button class="calculator__op">/</button>
+        <button class="calculator__delete">C</button>
+        <button class="calculator__op--igual">=</button>
+      </section>
+    </main>
+  </body>
 </html>
