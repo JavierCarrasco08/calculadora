@@ -48,7 +48,8 @@ body {
   min-width: 20rem;
   width: 40%;
   height: 70vh;
-  background-color: #102542;
+  background: linear-gradient(to bottom, #243949 0%, #243949 40%, #102542 150%), linear-gradient(to top, rgba(42, 82, 152, 0.4) 0%, rgba(16, 37, 66, 0.25) 200%);
+  background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   align-items: center;
