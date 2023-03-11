@@ -69,7 +69,8 @@ export class Calculator {
   }
   calculate() {
     const HIERARCHY = ["x", "÷", "-", "+"];
-    let conjuntoNumero = this.NUM_CALCULATOR.textContent.split(/([+,x,÷,-])/);
+    let conjuntoNumero = this.NUM_CALCULATOR.textContent.split(/([+,x,÷])/);
+    console.log(conjuntoNumero);
     HIERARCHY.forEach((e) => {
       for (let i = 0; i <= conjuntoNumero.length; i++) {
         if (e === conjuntoNumero[i] && conjuntoNumero[i] === "+") {
