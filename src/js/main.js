@@ -1,4 +1,5 @@
 import { Calculator } from "./calculator.js";
+import { calculadora } from "./example.js";
 const $BODY_CALCULATOR = document.querySelector(".calculator__body");
 const $CALCULATOR = new Calculator(document.querySelector(".calculator"));
 $BODY_CALCULATOR.addEventListener("pointerdown", (e) => {
@@ -21,3 +22,4 @@ $BODY_CALCULATOR.addEventListener("pointerdown", (e) => {
     $CALCULATOR.calculate();
   }
 });
+console.log(calculadora("5x-5"));

@@ -68,37 +68,33 @@ export class Calculator {
     this.NUM_CALCULATOR.textContent += target.textContent;
   }
   calculate() {
-    const HIERARCHY = ["x", "÷", "-", "+"];
-    let conjuntoNumero = this.NUM_CALCULATOR.textContent.split(/([+,x,÷])/);
-    console.log(conjuntoNumero);
-    HIERARCHY.forEach((e) => {
-      for (let i = 0; i <= conjuntoNumero.length; i++) {
-        if (e === conjuntoNumero[i] && conjuntoNumero[i] === "+") {
-          let num1 = +conjuntoNumero.at(i - 1),
-            num2 = +conjuntoNumero.at(i + 1);
-          conjuntoNumero.splice(i - 1, 3, num1 + num2);
+    const HIERARCHY = [1, 2];
+    let setsNumbers = this.NUM_CALCULATOR.textContent.split(/([+,x,÷])/);
+    HIERARCHY.forEach((num) => {
+      for (let i = 0; i <= setsNumbers.length; i++) {
+        if (num === 2 && setsNumbers[i] === "+") {
+          let num1 = +setsNumbers[i - 1];
+          let num2 = +setsNumbers[i + 1];
+          setsNumbers.splice(i - 1, 3, num1 + num2);
           i -= 1;
         }
-        if (e === conjuntoNumero[i] && conjuntoNumero[i] === "x") {
-          let num1 = +conjuntoNumero[i - 1],
-            num2 = +conjuntoNumero[i + 1];
-          conjuntoNumero.splice(i - 1, 3, num1 * num2);
-          i -= 1;
-        }
-        if (e === conjuntoNumero[i] && conjuntoNumero[i] === "-") {
-          let num1 = +conjuntoNumero[i - 1],
-            num2 = +conjuntoNumero[i + 1];
-          conjuntoNumero.splice(i - 1, 3, num1 - num2);
-          i -= 1;
-        }
-        if (e === conjuntoNumero[i] && conjuntoNumero[i] === "÷") {
-          let num1 = +conjuntoNumero[i - 1],
-            num2 = +conjuntoNumero[i + 1];
-          conjuntoNumero.splice(i - 1, 3, num1 / num2);
-          i -= 1;
+        if (num === 1) {
+          let num1, num2;
+          if (setsNumbers[i] === "x") {
+            num1 = +setsNumbers[i - 1];
+            num2 = +setsNumbers[i + 1];
+            setsNumbers.splice(i - 1, 3, num1 * num2);
+            i -= 1;
+          }
+          if (setsNumbers[i] === "÷") {
+            num1 = +setsNumbers[i - 1];
+            num2 = +setsNumbers[i + 1];
+            setsNumbers.splice(i - 1, 3, num1 / num2);
+            i -= 1;
+          }
         }
       }
     });
-    this.NUM_CALCULATOR.textContent = conjuntoNumero.join("");
+    this.NUM_CALCULATOR.textContent = setsNumbers.join("");
   }
 }
