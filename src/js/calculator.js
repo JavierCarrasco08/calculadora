@@ -1,3 +1,5 @@
+import { format } from "./format-string.js";
+
 export class Calculator {
   constructor(calculator) {
     this.calculator = calculator;
@@ -69,7 +71,9 @@ export class Calculator {
   }
   calculate() {
     const HIERARCHY = [1, 2];
-    let setsNumbers = this.NUM_CALCULATOR.textContent.split(/([+,x,÷])/);
+    let setsNumbers = format(this.NUM_CALCULATOR.textContent).split(
+      /([+,x,÷])/
+    );
     HIERARCHY.forEach((num) => {
       for (let i = 0; i <= setsNumbers.length; i++) {
         if (num === 2 && setsNumbers[i] === "+") {
